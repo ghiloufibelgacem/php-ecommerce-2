@@ -1,0 +1,31 @@
+<?php
+require_once("access.php");
+session_start();
+require_once("connect.php");
+if(isset($_POST['produit']))
+{	
+	if(isset($_SESSION['user']))
+	{
+		$id=strip_tags($_POST['produit']);
+		
+		if(array_key_exists($id,$_SESSION['panier']))
+		{
+			$_SESSION['panier'][$id]=$_SESSION['panier'][$id]+1;
+		}
+		else
+		{
+			$_SESSION['panier'][$id]=1;
+		}
+		$select=$db->prepare("SELECT category  FROM product WHERE code=?");
+		$select->execute(array($id));
+		$select=$select->fetch();
+		$cat=$select['category'];
+		$_POST['produit']=$cat;
+		require_once("produit.php");
+	}
+	else
+	{
+		require_once("login.php");	
+	}
+}
+?>
