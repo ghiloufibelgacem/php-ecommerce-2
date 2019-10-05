@@ -1,7 +1,12 @@
-<a href="#" target="_blank"><img src="images/ecommerce.jpg" alt=" Ecommerce WebSite " width="750"/></a>
+<a href="#" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTpE8Tzc7BShKLkAL3ih0bmpdg6-gx-HVHnFRqIR0L1dT1dBSeI" alt=" Ecommerce WebSite " width="750"/></a>
 
 # php-ecommerce
 ecommerce website
+
+
+## Author & License
+MIT license
+
 
 ## Features
 
